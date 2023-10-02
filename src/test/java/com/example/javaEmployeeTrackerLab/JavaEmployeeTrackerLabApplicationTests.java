@@ -24,12 +24,6 @@ class JavaEmployeeTrackerLabApplicationTests {
 	}
 
 	@Test
-	public void createEmployee() {
-		Employee john = new Employee("John", 31, 47, "john@yahoo.com");
-		employeeRepository.save(john);
-	}
-
-	@Test
 	public void createDepartmentAndAddEmployee() {
 		Department department = new Department("H.R.");
 		Employee employee = new Employee("Jack", 31, 3298, "email@email.com", department);
