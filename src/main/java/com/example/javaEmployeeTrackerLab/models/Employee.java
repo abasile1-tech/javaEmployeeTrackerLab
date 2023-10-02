@@ -21,13 +21,10 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "department")
-    private Department department;
-
     @ManyToOne
-    @JoinColumn(name="project_id", nullable = false)
+    @JoinColumn(name="department_id", nullable = false)
     @JsonIgnoreProperties({"employees"})
-    private Project project;
+    private Department department;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -97,14 +94,6 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 
     public Long getId() {
