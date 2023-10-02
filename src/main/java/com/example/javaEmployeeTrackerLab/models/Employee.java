@@ -122,4 +122,12 @@ public class Employee {
     public void setProjects(List<Project> projects) {
         this.projects = projects;
     }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 }
