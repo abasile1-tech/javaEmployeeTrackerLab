@@ -21,6 +21,9 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "department")
+    private Department department;
+
     @ManyToOne
     @JoinColumn(name="project_id", nullable = false)
     @JsonIgnoreProperties({"employees"})
@@ -57,6 +60,7 @@ public class Employee {
         this.age = age;
         this.employeeNumber = employeeNumber;
         this.email = email;
+        this.department = department;
         this.projects =  new ArrayList<>();
     }
 
